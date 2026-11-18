@@ -1,0 +1,31 @@
+.container{
+  background: #101010;
+  display: flex;
+  justify-content: center;
+  padding: 14px 24px;
+}
+
+label{
+  color: #ddd;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 8px 0 4px;
+}
+
+input{
+  all: unset;
+  flex-grow: 1;
+  min-width: 0;
+  color: white;
+}
+
+.search-container{
+  display: flex;
+  align-items: center;
+  width: min(520px, 100%);
+  border: 1px solid #555;
+  border-radius: 24px;
+  padding: 8px 12px;
+  color: white;
+  background: #1d1d1d;
+}

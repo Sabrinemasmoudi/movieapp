@@ -1,0 +1,20 @@
+<div class="wishlist-header">
+  <h2>Wish List</h2>
+  <button type="button" (click)="backToMovieList()">Back to movie list</button>
+</div>
+
+<div class="container">
+  @for (movie of movieService.wishList(); track movie.id) {
+    <div class="movie-card" (click)="navigateTo(movie)">
+      <img [src]="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" [alt]="movie.title">
+      <div class="movie-detail">
+        <h2>{{ movie.title }}</h2>
+        <button type="button" class="remove-button" (click)="removeFromWishList(movie, $event)">
+          Supprimer
+        </button>
+      </div>
+    </div>
+  } @empty {
+    <p class="empty-message">Votre wishlist est vide.</p>
+  }
+</div>
